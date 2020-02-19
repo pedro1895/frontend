@@ -65,13 +65,23 @@
       </v-card-text>
     </v-card>
     </v-content>
+    <v-data-table
+    :headers="headers"
+    :items="list"
+    :items-per-page="5"
+    class="elevation-1"
+    @load="loadList"
+    @click:row="handleClick"
+  ></v-data-table>
   </v-app>
 </template>
 
 <script>
+import axios from 'axios';
 export default {
   name: 'App',
   data: () => ({
+     list: [],
       valid: true,
       dns: '',
       dnsRules: [
@@ -81,19 +91,55 @@ export default {
       ipRules: [
         v => !!v || 'Ip is required',
       ],
+      headers: [
+          {
+            text: 'DNS',
+            align: 'left',
+            sortable: false,
+            value: 'dns',
+          },
+          { text: 'IP', value: 'ip' },
+        ],
+       
 
   }),
   components: {
   },
+  async mounted () {
+axios.get('http://localhost:9090/dns-services/list').then(response => {
+              this.list = response.data;
+              console.log("Response", response.data);
+            })
+            .catch(error => {
+              console.log(error)
+              this.errored = true
+            })
+},
   methods: {
       validate () {
         if (this.$refs.form.validate()) {
           this.snackbar = true
+          axios.post('http://localhost:9090/dns-services').then(response => {
+              this.dns = response.data.dns;
+              this.ip = response.data.ip;
+              console.log("Response", response.data);
+            })
+            .catch(error => {
+              console.log(error)
+              this.errored = true
+            })
+     
         }
       },
       reset () {
         this.$refs.form.reset()
       },
+      handleClick(value) {
+        this.ip = value.ip;
+        this.dns = value.dns;
+        console.log("Nome da fruta", value.dns);
+                console.log("Nome da fruta", value.ip);
+            },     
     },
 };
 </script>
