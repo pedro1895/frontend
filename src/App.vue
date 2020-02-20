@@ -119,10 +119,20 @@ axios.get('http://localhost:9090/dns-services/list').then(response => {
       validate () {
         if (this.$refs.form.validate()) {
           this.snackbar = true
-          axios.post('http://localhost:9090/dns-services').then(response => {
-              this.dns = response.data.dns;
-              this.ip = response.data.ip;
+          axios.post('http://localhost:9090/dns-services', {
+            ip : this.ip,
+            dns : this.dns
+          }).then(response => {
+              this.$refs.form.reset()
               console.log("Response", response.data);
+               axios.get('http://localhost:9090/dns-services/list').then(response => {
+              this.list = response.data;
+              console.log("Response", response.data);
+            })
+            .catch(error => {
+              console.log(error)
+              this.errored = true
+            })
             })
             .catch(error => {
               console.log(error)
