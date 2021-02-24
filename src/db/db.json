@@ -1,0 +1,152 @@
+{
+  "desserts": [
+    {
+      "name": "Ice cream sandwich",
+      "calories": "323",
+      "fat": 9,
+      "carbs": 37,
+      "protein": 4.3,
+      "id": 2
+    },
+    {
+      "name": "Gingerbread",
+      "calories": "356",
+      "fat": 16,
+      "carbs": 49,
+      "protein": 3.9,
+      "id": 5
+    },
+    {
+      "name": "Jelly bean",
+      "calories": "377",
+      "fat": "5",
+      "carbs": 94,
+      "protein": "2",
+      "id": 6
+    },
+    {
+      "name": "Lollipop",
+      "calories": 392,
+      "fat": 0.2,
+      "carbs": 98,
+      "protein": 0,
+      "id": 7
+    },
+    {
+      "name": "Honeycomb",
+      "calories": 408,
+      "fat": 3.2,
+      "carbs": 87,
+      "protein": 6.5,
+      "id": 8
+    },
+    {
+      "name": "Donut",
+      "calories": "520",
+      "fat": 25,
+      "carbs": 51,
+      "protein": 4.9,
+      "id": 9
+    },
+    {
+      "name": "KitKat",
+      "calories": "456",
+      "fat": 26,
+      "carbs": 65,
+      "protein": 7,
+      "id": 10
+    }
+  ],
+  "score": [
+    {
+      "name": "Flamengo",
+      "score": 30,
+      "games": 10,
+      "victories": 10,
+      "draw": 0,
+      "defeats": 0,
+      "scoredGoals": 30,
+      "concededGoals": 0,
+      "balance": 30,
+      "team": 1,
+      "championship":1
+    },
+    {
+      "name": "Palmeiras",
+      "score": 27,
+      "games": 10,
+      "victories": 9,
+      "draw": 0,
+      "defeats": 1,
+      "scoredGoals": 27,
+      "concededGoals": 3,
+      "balance": 24,
+      "team": 2,
+      "championship":1
+    },
+    {
+      "name": "Internacional",
+      "score": 24,
+      "games": 10,
+      "victories": 8,
+      "draw": 0,
+      "defeats": 2,
+      "scoredGoals": 24,
+      "concededGoals": 6,
+      "balance": 21,
+      "team": 3,
+      "championship":1
+    },
+    {
+      "name": "São Paulo",
+      "score": 21,
+      "games": 10,
+      "victories": 7,
+      "draw": 0,
+      "defeats": 3,
+      "scoredGoals": 23,
+      "concededGoals": 9,
+      "balance": 14,
+      "team": 4,
+      "championship":1
+    },
+    {
+      "name": "Fluminense",
+      "score": 18,
+      "games": 10,
+      "victories": 6,
+      "draw": 0,
+      "defeats": 4,
+      "scoredGoals": 20,
+      "concededGoals": 12,
+      "balance": 8,
+      "team": 5,
+      "championship":1
+    }
+  ],
+  "games": [
+    {"id" : 1, "teamhome": 1, "teamnamehome": "Flamengo", "teamaway" : 2, "teamnameaway": "Palmeiras", "goalhome" : 3 , "goalaway" : 0, "data" : "15/11/2020"},
+    {"id" : 2, "teamhome": 2, "teamnamehome": "Palmeiras", "teamaway" : 3, "teamnameaway": "Internacional", "goalhome" : 3 , "goalaway" : 0, "data" : "13/11/2020"},
+    {"id" : 3, "teamhome": 3, "teamnamehome": "Internacional", "teamaway" : 4, "teamnameaway": "São Paulo",  "goalhome" : 3 , "goalaway" : 0, "data" : "12/11/2020"},
+    {"id" : 4, "teamhome": 4, "teamnamehome": "São Paulo", "teamaway" : 5, "teamnameaway": "Fluminense", "goalhome" : 3 , "goalaway" : 0, "data" : "10/11/2020"},
+    {"id" : 5, "teamhome": 5, "teamnamehome": "Fluminense", "teamaway" : 2, "teamnameaway": "Palmeiras" ,"goalhome" : 3 , "goalaway" : 0, "data" : "05/11/2020"},
+    {"id" : 6, "teamhome": 1, "teamnamehome": "Flamengo", "teamaway" : 3, "teamnameaway": "Internacional", "goalhome" : 3 , "goalaway" : 0, "data" : "07/11/2020"},
+    {"id" : 7, "teamhome": 1, "teamnamehome": "Flamengo", "teamaway" : 4, "teamnameaway": "São Paulo", "goalhome" : 3 , "goalaway" : 0, "data" : "09/11/2020"},
+    {"id" : 8, "teamhome": 1, "teamnamehome": "Flamengo", "teamaway" : 5, "teamnameaway": "Fluminense", "goalhome" : 3 , "goalaway" : 0, "data" : "03/11/2020"}
+  ],
+  "teams": [
+    {"id" : 1, "name" : "Flamengo"},
+    {"id" : 2, "name" : "Palmeiras"},
+    {"id" : 3, "name" : "Internacional"},
+    {"id" : 4, "name" : "São Paulo"},
+    {"id" : 5, "name" : "Fluminense"}
+  ],
+  "championship": [
+    {"id" : 1,
+    "name": "Campeonato Brasileiro"},
+    {"id" : 2,
+      "name": "Copa do Brasil"},
+      {"id" : 3,
+        "name": "Libertadores"}
+  ]
+}
